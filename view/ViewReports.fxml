@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="520.0" minWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="software2.controller.ViewReportsController">
+   <children>
+      <Label layoutX="33.0" layoutY="22.0" prefHeight="21.0" prefWidth="129.0" text="Reports">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="179.0" layoutY="20.0" prefHeight="27.0" prefWidth="467.0" spacing="30.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#customerAppointmentsReport" text="Customer Appointments" />
+            <Button mnemonicParsing="false" onAction="#contactScheduleReport" text="Contact Schedule" />
+            <Button mnemonicParsing="false" onAction="#userAppointmentsReport" text="Appointments By User" />
+         </children>
+      </HBox>
+      <Button layoutX="894.0" layoutY="19.0" mnemonicParsing="false" onAction="#viewCustomersButton" text="Customers" />
+      <Button layoutX="776.0" layoutY="20.0" mnemonicParsing="false" onAction="#viewAppointmentsButton" text="Appointments" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="425.0" layoutX="27.0" layoutY="63.0" stroke="BLACK" strokeType="OUTSIDE" width="945.0" />
+      <Label fx:id="reportLabel" alignment="TOP_LEFT" layoutX="33.0" layoutY="64.0" prefHeight="425.0" prefWidth="938.0" />
+      <Label fx:id="reportLabel1" alignment="TOP_LEFT" layoutX="33.0" layoutY="92.0" prefHeight="395.0" prefWidth="116.0" />
+      <Label fx:id="reportLabel2" alignment="TOP_LEFT" layoutX="149.0" layoutY="92.0" prefHeight="395.0" prefWidth="224.0" />
+      <Label fx:id="reportLabel3" alignment="TOP_LEFT" layoutX="373.0" layoutY="92.0" prefHeight="395.0" prefWidth="140.0" />
+   </children>
+</AnchorPane>

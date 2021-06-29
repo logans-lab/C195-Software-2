@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="520.0" minWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="software2.controller.ViewCustomersController">
+   <children>
+      <Label layoutX="23.0" layoutY="12.0" prefHeight="21.0" prefWidth="129.0" text="Customers">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="customersTable" editable="true" layoutX="5.0" layoutY="39.0" prefHeight="200.0" prefWidth="990.0">
+         <columns>
+            <TableColumn fx:id="customersTableId" maxWidth="1.7976931348623157E308" minWidth="33.0" prefWidth="33.0" text="ID" />
+            <TableColumn fx:id="customersTableName" maxWidth="1.7976931348623157E308" minWidth="100.0" prefWidth="209.0" text="Name" />
+            <TableColumn fx:id="customersTablePhone" maxWidth="1.7976931348623157E308" minWidth="110.0" prefWidth="148.0" text="Phone" />
+            <TableColumn fx:id="customersTableAddress" maxWidth="1.7976931348623157E308" minWidth="20.0" prefWidth="236.0" text="Address" />
+            <TableColumn fx:id="customersTablePostalCode" maxWidth="1.7976931348623157E308" minWidth="0.0" prefWidth="103.0" text="Postal Code" />
+            <TableColumn fx:id="customersTableDivisionName" maxWidth="1.7976931348623157E308" minWidth="31.0" prefWidth="148.0" text="Division" />
+            <TableColumn fx:id="customersTableCountryName" maxWidth="1.7976931348623157E308" minWidth="34.0" prefWidth="111.0" text="Country" />
+         </columns>
+      </TableView>
+      <Button layoutX="30.0" layoutY="260.0" minWidth="70.0" mnemonicParsing="false" onAction="#deleteCustomerButton" text="Delete" />
+      <HBox alignment="CENTER" layoutX="198.0" layoutY="260.0" prefHeight="27.0" prefWidth="436.0" spacing="50.0">
+         <children>
+            <Button minWidth="70.0" mnemonicParsing="false" onAction="#editCustomerButton" text="Edit" />
+            <Button minWidth="70.0" mnemonicParsing="false" onAction="#clearCustomerButton" text="Clear" />
+            <Button minWidth="70.0" mnemonicParsing="false" onAction="#updateCustomerButton" text="Update" />
+            <Button minWidth="70.0" mnemonicParsing="false" onAction="#addCustomerButton" text="Add" />
+         </children>
+      </HBox>
+      <Button layoutX="845.0" layoutY="260.0" mnemonicParsing="false" onAction="#viewAppointmentsButton" text="View Appointments" />
+      <GridPane layoutX="131.0" layoutY="325.0" prefHeight="146.0" prefWidth="738.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="110.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="218.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="110.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.0" minWidth="10.0" prefWidth="218.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="Customer ID">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="customerId" alignment="CENTER" disable="true" editable="false" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Name" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="customerName" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Address" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="customerAddress" GridPane.columnIndex="3">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Postal Code" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="customerPostalCode" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Phone" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <ComboBox fx:id="customerDivision" prefHeight="27.0" prefWidth="213.0" GridPane.columnIndex="3" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets />
+               </GridPane.margin>
+            </ComboBox>
+            <Label text="Division" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <TextField fx:id="customerPhone" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <Label text="Country" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin>
+            </Label>
+            <ComboBox fx:id="customerCountry" prefHeight="27.0" prefWidth="213.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Button layoutX="744.0" layoutY="260.0" minWidth="70.0" mnemonicParsing="false" onAction="#viewReportsButton" text="Reports" />
+   </children>
+</AnchorPane>

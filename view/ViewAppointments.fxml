@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane minHeight="520.0" minWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="software2.controller.ViewAppointmentsController">
+   <children>
+      <Label layoutX="23.0" layoutY="12.0" prefHeight="21.0" prefWidth="129.0" text="Appointments">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <HBox layoutX="308.0" layoutY="13.0" prefHeight="20.0" prefWidth="390.0">
+         <children>
+            <RadioButton fx:id="viewAllAppointments" contentDisplay="CENTER" mnemonicParsing="false" text="View All" textAlignment="CENTER" HBox.hgrow="NEVER">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets right="40.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="viewMonthAppointments" contentDisplay="CENTER" mnemonicParsing="false" text="Current Month" textAlignment="CENTER" HBox.hgrow="NEVER">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets right="40.0" />
+               </padding>
+            </RadioButton>
+            <RadioButton fx:id="viewWeekAppointments" contentDisplay="CENTER" mnemonicParsing="false" text="Current Week" textAlignment="CENTER" HBox.hgrow="NEVER">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+               <padding>
+                  <Insets right="40.0" />
+               </padding>
+            </RadioButton>
+         </children>
+      </HBox>
+      <TableView fx:id="appointmentsTable" editable="true" layoutX="5.0" layoutY="39.0" prefHeight="200.0" prefWidth="990.0">
+        <columns>
+          <TableColumn fx:id="appointmentsId" maxWidth="1.7976931348623157E308" minWidth="33.0" prefWidth="33.0" text="ID" />
+          <TableColumn fx:id="appointmentsTitle" maxWidth="1.7976931348623157E308" minWidth="103.0" prefWidth="103.0" text="Title" />
+            <TableColumn fx:id="appointmentsDescription" maxWidth="1.7976931348623157E308" minWidth="120.0" prefWidth="120.0" text="Description" />
+            <TableColumn fx:id="appointmentsLocation" maxWidth="1.7976931348623157E308" minWidth="110.0" prefWidth="110.0" text="Location" />
+            <TableColumn fx:id="appointmentsContact" maxWidth="1.7976931348623157E308" minWidth="125.0" prefWidth="125.0" text="Contact" />
+            <TableColumn fx:id="appointmentsType" maxWidth="1.7976931348623157E308" minWidth="137.0" prefWidth="137.0" text="Type" />
+            <TableColumn fx:id="appointmentsStart" maxWidth="1.7976931348623157E308" minWidth="116.0" prefWidth="116.0" text="Start" />
+            <TableColumn fx:id="appointmentsEnd" maxWidth="1.7976931348623157E308" minWidth="116.0" prefWidth="116.0" text="End" />
+            <TableColumn fx:id="appointmentsCustomerName" maxWidth="1.7976931348623157E308" minWidth="130.0" prefWidth="130.0" text="Customer" />
+        </columns>
+      </TableView>
+      <Button layoutX="30.0" layoutY="260.0" minWidth="70.0" mnemonicParsing="false" onAction="#deleteAppointmentButton" text="Delete" />
+      <HBox alignment="CENTER" layoutX="198.0" layoutY="260.0" prefHeight="27.0" prefWidth="436.0" spacing="50.0">
+         <children>
+            <Button minWidth="70.0" mnemonicParsing="false" onAction="#editAppointmentButton" text="Edit" />
+            <Button minWidth="70.0" mnemonicParsing="false" onAction="#clearAppointmentButton" text="Clear" />
+            <Button minWidth="70.0" mnemonicParsing="false" onAction="#updateAppointmentButton" text="Update" />
+            <Button minWidth="70.0" mnemonicParsing="false" onAction="#addAppointmentButton" text="Add" />
+         </children>
+      </HBox>
+      <Button layoutX="862.0" layoutY="260.0" mnemonicParsing="false" onAction="#viewCustomersButton" text="View Customers" />
+      <GridPane layoutX="85.0" layoutY="304.0" prefHeight="187.0" prefWidth="830.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="169.0" minWidth="10.0" prefWidth="150.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="174.0" minWidth="10.0" prefWidth="160.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="180.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="156.0" minWidth="10.0" prefWidth="140.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Appointment ID">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></Label>
+            <TextField fx:id="apptId" alignment="CENTER" disable="true" editable="false" GridPane.columnIndex="1">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin></TextField>
+            <Label text="Title" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></Label>
+            <TextField fx:id="apptTitle" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin></TextField>
+            <Label text="Description" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></Label>
+            <TextField fx:id="apptDescription" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin></TextField>
+            <Label text="Location" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></Label>
+            <TextField fx:id="apptLocation" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin></TextField>
+            <Label text="Contact" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></Label>
+            <ComboBox fx:id="apptContact" prefHeight="27.0" prefWidth="169.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin></ComboBox>
+            <Label text="Type" GridPane.columnIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></Label>
+            <TextField fx:id="apptType" GridPane.columnIndex="3" />
+            <Label text="Start Date and Time" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></Label>
+            <DatePicker fx:id="apptStartDate" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <ComboBox fx:id="apptStartTime" prefHeight="27.0" prefWidth="164.0" GridPane.columnIndex="4" GridPane.rowIndex="1">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></ComboBox>
+            <Label text="End Date and Time" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></Label>
+            <DatePicker fx:id="apptEndDate" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <ComboBox fx:id="apptEndTime" prefHeight="27.0" prefWidth="164.0" GridPane.columnIndex="4" GridPane.rowIndex="2">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></ComboBox>
+            <Label text="Customer" GridPane.columnIndex="2" GridPane.rowIndex="3">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></Label>
+            <ComboBox fx:id="apptCustomer" prefHeight="27.0" prefWidth="180.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Label text="User" GridPane.columnIndex="2" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="5.0" />
+               </GridPane.margin></Label>
+            <ComboBox fx:id="apptUser" prefHeight="27.0" prefWidth="180.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+         </children>
+      </GridPane>
+      <Button layoutX="744.0" layoutY="260.0" minWidth="70.0" mnemonicParsing="false" onAction="#viewReportsButton" text="Reports" />
+   </children>
+</AnchorPane>
