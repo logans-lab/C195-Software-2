@@ -3,8 +3,7 @@ Course: WGU C195
 Application Title: Software2
 Purpose: Build a working GUI scheduling desktop application that connects with a database in real time.
          Contains 4 views: log-in authentication, appointments view, customer view, and reports view.
-Author: Logan Strong
-Contact: lstro15@wgu.edu
+Author: Logan
 Version: 1.0
 Date: May 20, 2021
 
