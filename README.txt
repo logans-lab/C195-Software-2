@@ -43,4 +43,4 @@ Reports View:
     Navigate to Appointment View and Customer View via the buttons.
     
 // FILE STRUCTURE
-
+<img width="354" alt="scheduling app file structure" src="https://user-images.githubusercontent.com/72273201/134787894-9c7293a0-0e00-4f5e-84f2-81455e820cc5.png">
