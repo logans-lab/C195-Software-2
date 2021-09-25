@@ -19,11 +19,11 @@ MySQL Connector Driver:     mysql-connector-java-8.0.22 (loaded into Libraries u
 This is a 3-view application with a login prompt only displayed at startup. The 3 views can be easily accessed by their
 respective buttons on each of the other views.
 
-Open .zip file and load into IntelliJ. Select specified JDK, SDK, and MySQL diver.
+Download files into configuration below and load into IntelliJ. Select specified JDK, SDK, and MySQL driver.
 Run Main.java. You will first be prompted to login using the login view. Once logged in, can easily navigate between
     the other 3 views.
 Login view:
-    Enter credentials. Default username and password are 'test', 'test'.
+    Enter credentials. Default username and password are 'test' and 'test'.
 Appointments view:
     Can toggle between all appointments, this month's appointments, and this week's appointments at the top.
     View and select an appointment in the table.
@@ -41,8 +41,6 @@ Reports View:
     Appointments By User displays the total number of appointments for the total number of customers, which were added
         by each user.
     Navigate to Appointment View and Customer View via the buttons.
+    
+// FILE STRUCTURE
 
-
-//  ADDITION REPORT AS PER A3f OF THE REQUIREMENTS
-The third report displays the total (unique) number of appointments for the total (unique) number of customers added
-by each user.
